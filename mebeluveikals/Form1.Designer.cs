@@ -1,4 +1,4 @@
-﻿namespace mebeluveikals
+namespace mebeluveikals
 {
     partial class Form1
     {
@@ -46,11 +46,8 @@
             addButton = new Button();
             editBtn = new Button();
             deleteBtn = new Button();
-            menuStrip1 = new MenuStrip();
-            menuToolStripMenuItem = new ToolStripMenuItem();
-            importCsvToolStripMenuItem = new ToolStripMenuItem();
-            exportCSVToolStripMenuItem = new ToolStripMenuItem();
-            menuStrip1.SuspendLayout();
+            exportCsvButton = new Button();
+            importCsvButton = new Button();
             SuspendLayout();
             // 
             // selectProductComboBox
@@ -195,7 +192,6 @@
             editBtn.TabIndex = 16;
             editBtn.Text = "Rediģēt";
             editBtn.UseVisualStyleBackColor = true;
-
             // 
             // deleteBtn
             // 
@@ -207,41 +203,33 @@
             deleteBtn.UseVisualStyleBackColor = true;
             deleteBtn.Click += deleteBtn_Click;
             // 
-            // menuStrip1
+            // exportCsvButton
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(443, 24);
-            menuStrip1.TabIndex = 18;
-            menuStrip1.Text = "menuStrip1";
+            exportCsvButton.Location = new Point(299, 298);
+            exportCsvButton.Name = "exportCsvButton";
+            exportCsvButton.Size = new Size(106, 24);
+            exportCsvButton.TabIndex = 19;
+            exportCsvButton.Text = "Eksportēt CSV";
+            exportCsvButton.UseVisualStyleBackColor = true;
+            exportCsvButton.Click += exportCsvButton_Click;
             // 
-            // menuToolStripMenuItem
+            // importCsvButton
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { importCsvToolStripMenuItem, exportCSVToolStripMenuItem });
-            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
-            menuToolStripMenuItem.Size = new Size(50, 20);
-            menuToolStripMenuItem.Text = "Menu";
-            // 
-            // importCsvToolStripMenuItem
-            // 
-            importCsvToolStripMenuItem.Name = "importCsvToolStripMenuItem";
-            importCsvToolStripMenuItem.Size = new Size(134, 22);
-            importCsvToolStripMenuItem.Text = "Import CSV";
-            importCsvToolStripMenuItem.Click += importCsvToolStripMenuItem_Click;
-            // 
-            // exportCSVToolStripMenuItem
-            // 
-            exportCSVToolStripMenuItem.Name = "exportCSVToolStripMenuItem";
-            exportCSVToolStripMenuItem.Size = new Size(134, 22);
-            exportCSVToolStripMenuItem.Text = "Export CSV";
-            exportCSVToolStripMenuItem.Click += exportCSVToolStripMenuItem_Click;
+            importCsvButton.Location = new Point(301, 268);
+            importCsvButton.Name = "importCsvButton";
+            importCsvButton.Size = new Size(106, 24);
+            importCsvButton.TabIndex = 20;
+            importCsvButton.Text = "Importēt CSV";
+            importCsvButton.UseVisualStyleBackColor = true;
+            importCsvButton.Click += importCsvButton_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(443, 354);
+            ClientSize = new Size(443, 352);
+            Controls.Add(importCsvButton);
+            Controls.Add(this.exportCsvButton);
             Controls.Add(deleteBtn);
             Controls.Add(editBtn);
             Controls.Add(addButton);
@@ -260,14 +248,10 @@
             Controls.Add(nameTextBox);
             Controls.Add(label1);
             Controls.Add(selectProductComboBox);
-            Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            MaximumSize = new Size(459, 393);
-            MinimumSize = new Size(459, 393);
+            MaximumSize = new Size(459, 391);
+            MinimumSize = new Size(459, 391);
             Name = "Form1";
             Text = "Mēbeļu veikals";
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -292,9 +276,7 @@
         private Button addButton;
         private Button editBtn;
         private Button deleteBtn;
-        private MenuStrip menuStrip1;
-        private ToolStripMenuItem menuToolStripMenuItem;
-        private ToolStripMenuItem importCsvToolStripMenuItem;
-        private ToolStripMenuItem exportCSVToolStripMenuItem;
+        private Button importCsvButton;
+        private Button exportCsvButton;
     }
 }
