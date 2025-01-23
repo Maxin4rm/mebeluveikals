@@ -1,4 +1,4 @@
-﻿using Microsoft.Data.Sqlite;
+using Microsoft.Data.Sqlite;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 
@@ -105,7 +105,7 @@ namespace mebeluveikals
             MessageBox.Show("Mēbele tika izdzēsta no datubāzes.");
         }
 
-        private void importCsvToolStripMenuItem_Click(object sender, EventArgs e)
+        private void importCsvButton_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -120,7 +120,7 @@ namespace mebeluveikals
             }
         }
 
-        private void exportCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        private void exportCsvButton_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -160,7 +160,7 @@ namespace mebeluveikals
                 {
                     var line = reader.ReadLine();
                     var values = line!.Split(',');
-                  
+
                     try
                     {
                         var value = new Furniture(
